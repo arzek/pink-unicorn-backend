@@ -25,7 +25,6 @@ export class AppService {
         Last name: ${form.lastName}
         Email: ${form.email}
         Phone: ${form.phone}
-        Phone: ${form.phone}
         Country: ${form.country}
         City: ${form.city}
         Desired position: ${form.desiredPosition}
