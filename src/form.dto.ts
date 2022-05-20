@@ -1,4 +1,4 @@
-import { IsEmail, IsNumber, IsString } from 'class-validator';
+import { IsEmail, IsNumber, IsOptional, IsString } from 'class-validator';
 
 export class FormDto {
   @IsString()
@@ -38,18 +38,23 @@ export class FormDto {
   @IsString()
   communicationChannel: string;
 
+  @IsOptional()
   @IsString()
   linkedIn: string;
 
+  @IsOptional()
   @IsString()
   skype: string;
 
+  @IsOptional()
   @IsString()
   telegram: string;
 
+  @IsOptional()
   @IsString()
   whatsApp: string;
 
+  @IsOptional()
   @IsString()
   comment: string;
 
