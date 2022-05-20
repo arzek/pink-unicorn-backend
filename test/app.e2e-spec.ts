@@ -15,10 +15,32 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  it('/ (POST)', () => {
     return request(app.getHttpServer())
-      .get('/')
-      .expect(200)
-      .expect('Hello World!');
+      .post('/')
+      .send({
+        firstName: 'test',
+        lastName: 'test',
+        email: 'test',
+        phone: 'test',
+        country: 'test',
+        city: 'test',
+        desiredPosition: 'test',
+        skills: 'test',
+        experience: 3,
+        english: 'B2',
+        salary: 4000,
+        communicationChannel: 'test',
+        linkedIn: 'test',
+        skype: 'test',
+        telegram: 'test',
+        whatsApp: 'test',
+        comment: 'test',
+        cv: 'cv',
+      })
+      .expect(201)
+      .catch((e) => {
+        console.log(e);
+      });
   });
 });
