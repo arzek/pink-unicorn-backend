@@ -8,6 +8,11 @@ import { FormDto } from './form.dto';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
+  @Get()
+  check() {
+    return 'Good!';
+  }
+
   @Post()
   async saveForm(@Body() form: FormDto) {
     await this.appService.crateIssue(form);
